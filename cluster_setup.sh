@@ -94,7 +94,7 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 worker_join_token=$(kubeadm token create --print-join-command)
 for each in ${Sip1} ${Sip2}
 do 
-ssh ${each} '${worker_join_token}'
+ssh ${each} ${worker_join_token}
 done
 clear
 kubectl get nodes
