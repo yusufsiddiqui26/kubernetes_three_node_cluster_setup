@@ -87,7 +87,6 @@ cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 chown $(id -u):$(id -g) $HOME/.kube/config
 echo 'source <(kubectl completion bash)' >> /etc/bashrc
 echo 'source <(kubeadm completion bash)' >> /etc/bashrc
-source /etc/bashrc
 
 export kubever=$(kubectl version | base64 | tr -d '\n')
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
@@ -96,5 +95,6 @@ for each in ${Sip1} ${Sip2}
 do 
 ssh ${each} ${worker_join_token}
 done
+source /etc/bashrc
 clear
 kubectl get nodes
