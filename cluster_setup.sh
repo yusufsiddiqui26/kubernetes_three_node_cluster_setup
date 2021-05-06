@@ -2,7 +2,7 @@
 
 echo "This Script is made to set 3 node cluster with 1 master and 2 slave"
 echo -e "\e[33mINSTRUCTION\e[0m::\n\e[32mOs and Version :: CentOS Linux release 7.4.1708 (Core)\nPlease disable selinux"
-echo -e "Please run this script on master server only\nPasswordless authentication set from Master server to all Slave server\nPlease run as a root user with same password\e[0m"
+echo -e "Please run this script on master server only\nThis script will set passwordless authentication set from Master server to all Slave server\nPlease run as a root user with same password\e[0m"
 read -p "Please provide master ip:: " Mip
 read -p "Please provide Slave 1 ip:: " Sip1
 read -p "Please provide Slave 2 ip:: " Sip2
